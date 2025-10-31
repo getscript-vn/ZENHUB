@@ -15,7 +15,7 @@ function N_(text)
     })
 end
 function Load()
-loadstring(game:HttpGet('https://upload.cswz.site/api/423835553404195.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/getscript-vn/ZENHUB/refs/heads/main/loader.lua'))()
 end
 function AZT()
     if getgenv().AZTSettings.Key == false then
@@ -38,5 +38,5 @@ local Window = Fluent:CreateWindow({Title = "ZENHUB " .. Fluent.Version,SubTitle
 local Tabs = {Main = Window:AddTab({ Title = "Main", Icon = "" })}
 Tabs.Main:AddInput("Keybox",{Title="Vui Lòng Nhập Key Vào Textbox",Default="",Placeholder="Key",Numeric=false,Finished=false,Callback=function(a)getgenv().AZTSettings.Key=a end})
 Tabs.Main:AddButton({Title="Kiểm Tra Key",Description="Kiểm Tra Key ZenHub để có thể sử dụng",Callback=function() if AZT() then Window:Destroy() end end})
-Tabs.Main:AddButton({Title="Sao Chép Link Get Key",Description="Sao Chép Link Để Nhận Key",Callback=function()setclipboard('https://new.cswz.site/ZENHUB')N_("Đã Copy Link")end})
+Tabs.Main:AddButton({Title="Sao Chép Link Get Key",Description="Sao Chép Link Để Nhận Key (https://new.cswz.site/ZENHUB)",Callback=function()setclipboard('https://new.cswz.site/ZENHUB')N_("Đã Copy Link")end})
 Window:SelectTab(1)
